@@ -7,7 +7,7 @@ class UserController {
         $user = new User();
         $users = $user->getAllUsers();
         echo json_encode($users);
-        echo('test1');
+        
     }
 
 
