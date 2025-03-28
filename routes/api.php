@@ -1,6 +1,7 @@
 <?php
 require_once __DIR__ .'/../app/controllers/UserController.php';
 require_once __DIR__ .'/../app/controllers/ProductController.php';
+require_once __DIR__ .'/../app/controllers/OrderController.php';
 
 
 
@@ -23,6 +24,14 @@ if (isset($_GET['url'])) {
         $ProductController = new ProductController();
         
         $ProductController->getProduct();
+
+    }
+
+    if($url[1] == "orders"){
+
+        $OrderController = new OrderController();
+        
+        $OrderController->getOrders();
 
     }
 } 
